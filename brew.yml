@@ -1,0 +1,32 @@
+---
+- name: Install Homebrew packages
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    brew_packages:
+      - skopeo
+      - jq
+      - direnv
+      - tree
+      - neovim
+      - fzf
+      - gnupg
+      - fwdcloudsec/granted/granted
+
+    brew_casks:
+      - session-manager-plugin
+
+  tasks:
+    - name: Install packages via Homebrew
+      community.general.homebrew:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ brew_packages }}"
+
+    - name: Install casks via Homebrew
+      community.general.homebrew_cask:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ brew_casks }}"
