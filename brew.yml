@@ -7,12 +7,14 @@
   vars:
     brew_packages:
       - skopeo
+      - awscli
       - jq
       - direnv
       - tree
       - neovim
       - fzf
       - gnupg
+      - just
       - fwdcloudsec/granted/granted
 
     brew_casks:
