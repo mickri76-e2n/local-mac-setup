@@ -5,4 +5,3 @@ Simple. Only dependencies: Python3 `uv` / `uvx`. And `make` is optional but usef
 ```shell
   make brew
 ```
-
