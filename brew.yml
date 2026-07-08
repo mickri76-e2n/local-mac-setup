@@ -16,6 +16,11 @@
       - gnupg
       - just
       - fwdcloudsec/granted/granted
+      - grype
+      - syft
+      - pre-commit
+      - mysql-client@8.4
+      - trufflehog
 
     brew_casks:
       - session-manager-plugin
